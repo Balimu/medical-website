@@ -1,11 +1,11 @@
 <script>
 import NavBar from "../components/NavBar.vue";
-import TheContent from "../components/TheContent.vue";
+import Accueil from "../components/Accueil.vue";
 
 export default {
   components: {
     NavBar,
-    TheContent,
+    Accueil,
   }
 }
 </script>
@@ -13,6 +13,9 @@ export default {
 <template>
   <main>
     <NavBar />
-    <TheContent />
+    <div class="pt-16">
+      <Accueil />
+    </div>
+    
   </main>
 </template>
