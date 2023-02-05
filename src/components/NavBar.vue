@@ -3,7 +3,7 @@
     <nav class="bg-red-500 h-16 px-4 sm:px-4 fixed w-full z-20 top-0 left-0">
     <div class="container flex flex-wrap items-center justify-between pt-2 md:pt-0">
         <div class="flex items-center">
-            <img src="../assets/logo_stethoscope.jpg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+            <img src="../assets/logo_celine.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Cabinet Levecq-Maissin</span>
         </div>
 
