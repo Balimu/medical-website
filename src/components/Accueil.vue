@@ -52,8 +52,8 @@ export default {
         </div>
 
         <div class="col2 mt-12 pt-12 px-8 mr-8">
-            <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Prendre rendez-vous avec la Docteure Levecq</button>
-            <button type="button" @mouseover="hover = true" @mouseleave="hover = false" class="relative bg-blue-500 text-white py-2 px-4 rounded mt-4">
+            <button class="bg-[#4a9dd1] text-white font-bold py-2 px-4 rounded">Prendre rendez-vous avec la Docteure Levecq</button>
+            <button type="button" @mouseover="hover = true" @mouseleave="hover = false" class="relative bg-[#4a9dd1] text-white py-2 px-4 rounded mt-4">
                 <div class="font-bold invisible">Prendre rendez-vous avec la Docteure Maissin</div>
                 <div :class="{ invisible: hover }" class="font-bold button-label">Prendre rendez-vous avec la Docteure Maissin</div>
                 <div :class="{ invisible: !hover }" class="text-center font-bold button-label">+32 495 00 00 00</div>
