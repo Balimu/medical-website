@@ -13,7 +13,7 @@ export default {
 <template>
   <main>
     <NavBar />
-    <div class="pt-16">
+    <div class="pt-16 w-full items-center mx-auto">
       <Accueil />
     </div>
     
