@@ -34,15 +34,15 @@ export default {
 
 <template>
 
-    <div class="mx-auto w-full max-w-screen-2xl px-4 grid grid-cols-[2fr_1fr]">
+    <div class="grid grid-cols-[2fr_1fr]">
 
         <div class="col1 px-8">
             <div class="mt-12 text-2xl text-left h-12 md:text-4xl">
-                <span style="font-family: 'Satisfy', cursive;">
+                <h1 style="font-family: 'Satisfy', cursive;">
                     {{ typeValue }} 
-                </span>
+                </h1>
             </div>
-            <div class="mt-12 text-lg text-left max-w-3xl">
+            <div class="mt-20 text-lg text-left max-w-3xl">
                 <Transition name="fade">
                     <span v-if="showP">
                         Le Cabinet Levecq-Maissin est... Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
