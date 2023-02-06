@@ -53,16 +53,16 @@ export default {
 
         <div class="col2 mt-12 pt-12 px-8 mr-8">
             <a href="https://be.mobminder.com/e-resa.php?p=drcelinelevecq">
-                <button class="bg-[#4a9dd1] text-white font-bold py-2 px-4 rounded">
-                    Prendre rendez-vous avec la Docteure Levecq
+                <button class="bg-[#4a9dd1] text-white font-bold py-2 px-8 rounded">
+                    Prendre rendez-vous <br/> avec la Docteure Levecq
                 </button>
             </a>
-            <button type="button" @mouseover="hover = true" @click="hover = true" class="relative bg-[#4a9dd1] text-white py-2 px-4 rounded mt-4">
-                <div class="font-bold">Prendre rendez-vous avec la Docteure Maissin</div>
+            <button type="button" @mouseover="hover = true" @click="hover = true" class="relative bg-[#4a9dd1] text-white py-2 px-8 rounded mt-4">
+                <div class="font-bold">Prendre rendez-vous <br/> avec la Docteure Maissin</div>
             </button>
-            <div :class="{ invisible: !hover }" class="bg-[#4a9dd1] bg-opacity-50 max-w-[364px] font-bold mx-auto">
+            <div :class="{ invisible: !hover }" class="bg-[#4a9dd1] bg-opacity-50 max-w-[364px] font-bold text-lg mx-auto">
                 <font-awesome-icon icon="phone" />
-                +32 495 00 00 00</div>
+                065 98 27 69</div>
         </div>
 
     </div>
