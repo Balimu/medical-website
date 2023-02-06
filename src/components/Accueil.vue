@@ -54,14 +54,15 @@ export default {
         <div class="col2 mt-12 pt-12 px-8 mr-8">
             <a href="https://be.mobminder.com/e-resa.php?p=drcelinelevecq">
                 <button class="bg-[#4a9dd1] text-white font-bold py-2 px-4 rounded">
-                Prendre rendez-vous avec la Docteure Levecq
+                    Prendre rendez-vous avec la Docteure Levecq
                 </button>
             </a>
-            <button type="button" @mouseover="hover = true" @mouseleave="hover = false" class="relative bg-[#4a9dd1] text-white py-2 px-4 rounded mt-4">
-                <div class="font-bold invisible">Prendre rendez-vous avec la Docteure Maissin</div>
-                <div :class="{ invisible: hover }" class="font-bold button-label">Prendre rendez-vous avec la Docteure Maissin</div>
-                <div :class="{ invisible: !hover }" class="text-center font-bold button-label">+32 495 00 00 00</div>
+            <button type="button" @mouseover="hover = true" @click="hover = true" class="relative bg-[#4a9dd1] text-white py-2 px-4 rounded mt-4">
+                <div class="font-bold">Prendre rendez-vous avec la Docteure Maissin</div>
             </button>
+            <div :class="{ invisible: !hover }" class="bg-[#4a9dd1] bg-opacity-50 max-w-[364px] font-bold mx-auto">
+                <font-awesome-icon icon="phone" />
+                +32 495 00 00 00</div>
         </div>
 
     </div>
@@ -69,15 +70,6 @@ export default {
 </template>
 
 <style>
-.button-label {
-    position: absolute;
-    top: 0.5rem;
-    bottom: 0.5rem;
-    left: 1rem;
-    right: 1rem;
-    text-align: center;
-}
-
 .fade-enter-from {
     opacity: 0;
 }
