@@ -10,6 +10,7 @@ export default {
             paragraphVisible: false,
             showP: false,
             hover: false,
+            offsetWidth: 0,
         }
     },
     methods: {
@@ -28,6 +29,14 @@ export default {
     created() {
         setTimeout(this.typeText, 200);
         setTimeout(this.toggleShowP, 500);
+    },
+    mounted () {
+        this.offsetWidth = document.getElementById('rdv-maissin').offsetWidth
+        },
+    computed: {
+        getBannerStyle () {
+            return `width: ${this.offsetWidth}px;`
+        }
     }
 }
 </script>
@@ -53,14 +62,14 @@ export default {
 
         <div class="col2 mt-12 pt-12 px-8 mr-8">
             <a href="https://be.mobminder.com/e-resa.php?p=drcelinelevecq">
-                <button class="bg-[#4a9dd1] text-white font-bold py-2 px-8 rounded">
+                <button class="border border-black bg-[#4a9dd1] text-white font-bold py-2 px-8 rounded">
                     Prendre rendez-vous <br/> avec la Docteure Levecq
                 </button>
             </a>
-            <button type="button" @mouseover="hover = true" @click="hover = true" class="relative bg-[#4a9dd1] text-white py-2 px-8 rounded mt-4">
+            <button id="rdv-maissin" type="button" @mouseover="hover = true" @click="hover = true" class="border border-black relative bg-[#4a9dd1] text-white py-2 px-8 rounded mt-4">
                 <div class="font-bold">Prendre rendez-vous <br/> avec la Docteure Maissin</div>
             </button>
-            <div :class="{ invisible: !hover }" class="bg-[#4a9dd1] bg-opacity-50 max-w-[364px] font-bold text-lg mx-auto">
+            <div :class="{ invisible: !hover }" :style="getBannerStyle" class="bg-[#4a9dd1] bg-opacity-50 max-w-[364px] font-bold text-lg mx-auto">
                 <font-awesome-icon icon="phone" />
                 065 98 27 69</div>
         </div>
