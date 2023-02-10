@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <template>
     
     <footer class="bg-[#464444] h-16 px-4 sm:px-4 fixed left-0 bottom-0 w-full grid grid-cols-3">
@@ -11,7 +15,3 @@
     </footer>
 
 </template>
-
-<script>
-
-</script>

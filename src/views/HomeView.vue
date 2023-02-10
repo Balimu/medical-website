@@ -12,12 +12,12 @@ export default {
     Footer,
     NosMedecins,
     Contact
-}
+  }
 }
 </script>
 
 <template>
-  <main class>
+  <main>
     <NavBar />
     <div class="pt-16 w-full items-center mx-auto max-w-screen-2xl px-4">
       <Accueil />

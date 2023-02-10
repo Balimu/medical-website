@@ -1,6 +1,11 @@
+<script>
+
+</script>
+
 <template>
-    <div class="text-left mx-8 mt-20">
-        <h1 class="text-3xl font-bold">
+    <div class="mx-8 text-left">
+        <div id="nos-medecins" class="h-16"></div>
+        <h1 class="text-3xl font-bold mt-4">
             Nos médecins
         </h1>
 
@@ -15,9 +20,3 @@
 
     </div>
 </template>
-
-<script>
-export default {
-    
-}
-</script>
