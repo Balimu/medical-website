@@ -1,7 +1,41 @@
+<script>
+import { ref } from 'vue';
+
+export default {
+    data: () => {
+        return {
+            scrollPosition: ref(window.scrollY),
+        }
+    },
+    methods: {
+        scrollTo(element_id) {
+            const el = document.getElementById(element_id);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+        },
+        getViewingSection() {
+            const topNosMedecins = document.getElementById("nos-medecins").getBoundingClientRect().top;
+            console.log("topNosMedecins: " + topNosMedecins);
+            const topContact = document.getElementById("contact").getBoundingClientRect().top;
+            let currentSection = "";
+            if(this.scrollPosition < topNosMedecins) {
+                currentSection = "Accueil";
+            } else if (topNosMedecins <= this.scrollPosition && this.scrollPosition < topContact) {
+                currentSection = "NosMedecins";
+            } else {
+                currentSection = "Contact";
+            }
+            return currentSection;
+        }
+    }
+}
+</script>
+
 <template>
     
-    <nav class="bg-[#f45b5b] h-16 px-4 sm:px-4 fixed w-full z-20 top-0 left-0">
-        <div class="items-center mx-auto w-full max-w-screen-2xl flex flex-wrap justify-between pt-2 md:pt-0">
+    <nav class="bg-[#f45b5b] h-16 z-20 px-4 sm:px-4 fixed w-full top-0 left-0">
+        <div class="items-center mx-auto my-auto mt-1 w-full max-w-screen-2xl flex justify-between">
             <div class="flex items-center">
                 <img src="../assets/logo_celine_bold.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Cabinet Levecq-Maissin</span>
@@ -15,13 +49,22 @@
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
                 <li>
-                <a href="#" class="block w-28 py-2 pl-3 pr-4 text-base text-white bg-blue-700 rounded md:bg-transparent md:p-0 font-bold" aria-current="page">Accueil</a>
+                    <button @click="scrollTo('app')" :class="{ bold: getViewingSection == 'Accueil' }" 
+                        class="block w-28 py-2 pl-3 pr-4 text-base text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">
+                        Accueil
+                    </button>
                 </li>
                 <li>
-                <a href="#" class="block w-28 py-2 pl-3 pr-4 text-base text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">Nos médecins</a>
+                    <button @click="scrollTo('nos-medecins')" :class="{ bold: getViewingSection == 'NosMedecins' }" 
+                        class="block w-28 py-2 pl-3 pr-4 text-base text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">
+                        Nos médecins
+                    </button>
                 </li>
                 <li>
-                <a href="#" class="block w-28 py-2 pl-3 pr-4 text-base text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">Contact</a>
+                    <button @click="scrollTo('contact')" :class="{ bold: getViewingSection == 'Contact' }" 
+                        class="block w-28 py-2 pl-3 pr-4 text-base text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">
+                        Contact
+                    </button>
                 </li>
             </ul>
             </div>
@@ -29,9 +72,3 @@
     </nav>
 
 </template>
-
-<script>
-export default {
-    
-}
-</script>
