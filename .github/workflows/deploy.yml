@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Deploy Website
+    name: Build Website
     runs-on: ubuntu-latest
 
     steps:
@@ -31,10 +31,12 @@ jobs:
           path: ./dist
 
   deploy:
-    name: Deploy
+    name: Deploy Website
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/develop'
+    permissions:
+      contents: write
 
     steps:
       - name: Download build-files created in previous job
