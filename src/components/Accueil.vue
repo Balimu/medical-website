@@ -50,15 +50,15 @@ export default {
 
 <template>
 
-    <div class="grid grid-cols-[2fr_1fr]">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr]">
 
         <div class="col1 px-8">
-            <div class="mt-8 h-32 flex content-center text-2xl text-left md:text-4xl">
+            <div class="mt-4 md:mt-8 h-24 md:h-32 flex content-center text-2xl text-left md:text-4xl">
                 <h1 id="accueil" class="my-auto leading-tight" style="font-family: 'Satisfy', cursive;">
                     {{ typeValue }} 
                 </h1>
             </div>
-            <div class="text-lg text-left max-w-3xl">
+            <div class="md:text-lg text-left max-w-3xl">
                 <Transition name="fade">
                     <span v-if="showP">
                         Le Cabinet Levecq-Maissin est... Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -67,9 +67,13 @@ export default {
             </div>
         </div>
 
-        <div class="col2 mt-12 pt-12 px-8 mr-8">
-            <ButtonLevecq />
-            <ButtonMaissin />
+        <div class="col2 md:mt-12 pt-8 md:pt-12 px-8 mr-8">
+            <div class="mb-2">
+                <ButtonLevecq />
+            </div>
+            <div>
+                <ButtonMaissin />
+            </div>
         </div>
 
     </div>

@@ -3,6 +3,18 @@ export default {
     data: () => {
         return {
             hover: false,
+            count: 0,
+        }
+    },
+    methods: {
+        setHover() {
+            this.count += 1;
+            if(this.hover && this.count == 2) {
+                this.hover = false;
+                this.count = 0;
+            } else {
+                this.hover = true;
+            }
         }
     }
 }
@@ -10,7 +22,7 @@ export default {
 
 <template>
 
-    <button type="button" @mouseover="hover = true" @click="hover = true" 
+    <button type="button" @mouseenter="hover = true" @click="setHover" 
     class="relative">
         <div id="rdv-maissin" class="border border-black bg-[#4a9dd1] text-white py-2 px-8 rounded mt-4">
             <span class="font-bold">Prendre rendez-vous <br/> avec la Docteure Maissin</span>
