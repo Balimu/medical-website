@@ -35,6 +35,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/develop'
+    permissions:
+      contents: write
 
     steps:
       - name: Download build-files created in previous job
