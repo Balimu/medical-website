@@ -54,7 +54,7 @@ export default {
 
         <div class="col1 px-8">
             <div class="mt-8 h-32 flex content-center text-2xl text-left md:text-4xl">
-                <h1 id="accueil" class="my-auto" style="font-family: 'Satisfy', cursive;">
+                <h1 id="accueil" class="my-auto leading-tight" style="font-family: 'Satisfy', cursive;">
                     {{ typeValue }} 
                 </h1>
             </div>
