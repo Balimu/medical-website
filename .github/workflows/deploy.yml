@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: build-files
           path: ./dist
@@ -40,7 +40,7 @@ jobs:
 
     steps:
       - name: Download build-files created in previous job
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v2
         with:
           name: build-files
           path: ./dist
