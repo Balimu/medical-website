@@ -25,7 +25,7 @@ export default {
         <div class="flex flex-wrap mt-8 md:mt-16 mb-32">
             <div class="col1 mb-4 w-[300px] text-center">
                 <p class="mb-8">
-                    <span class="font-bold">Adresse: </span><br/> Rue de Bouzanton 11, <br/>
+                    <span class="font-bold">Adresse: </span><br/> 11 rue de Bouzanton <br/>
                     7000 Mons, Belgique
                 </p>
                 <div class="mb-2">
@@ -35,9 +35,10 @@ export default {
                     <ButtonMaissin />
                 </div>
             </div>
-            <div class="col2 block md:grow w-full md:w-auto content-center">
+            <div class="col2 block md:grow w-full md:w-auto content-center border border-black">
                 <iframe class="w-full mx-auto h-[240px] md:h-[450px] max-w-[700px]" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
                     :src="'https://www.google.com/maps/embed/v1/place?key=' + mapsApiKey + '&q=docteur+céline+levecq,Mons'"
+                    alt="Carte de Google Maps avec l'emplacement du Cabinet"
                 ></iframe>
             </div>
 
