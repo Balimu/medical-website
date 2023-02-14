@@ -14,8 +14,10 @@ export default {
             if (el) {
                 el.scrollIntoView({ behavior: "smooth" });
             }
+            this.burgerMenu = true;
         },
         getViewingSection() {
+            console.log(window.scrollY);
             const topNosMedecins = document.getElementById("nos-medecins").getBoundingClientRect().top;
             console.log("topNosMedecins: " + topNosMedecins);
             const topContact = document.getElementById("contact").getBoundingClientRect().top;
@@ -28,8 +30,8 @@ export default {
                 currentSection = "Contact";
             }
             return currentSection;
-        }
-    }
+        },
+    },
 }
 </script>
 

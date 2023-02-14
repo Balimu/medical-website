@@ -59,11 +59,16 @@ export default {
                 </h1>
             </div>
             <div class="md:text-lg text-left max-w-3xl">
-                <Transition name="fade">
-                    <span v-if="showP">
+                <div class="relative">
+                    <span class="invisible">
                         Le Cabinet Levecq-Maissin est... Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </span>
-                </Transition>
+                    <Transition name="fade" class="absolute top-0 left-0">
+                        <span v-if="showP">
+                            Le Cabinet Levecq-Maissin est... Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </span>
+                    </Transition>
+                </div>
             </div>
         </div>
 
