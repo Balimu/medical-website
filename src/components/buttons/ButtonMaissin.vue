@@ -24,7 +24,7 @@ export default {
 
     <button type="button" @mouseenter="hover = true" @click="setHover" 
     class="relative">
-        <div id="rdv-maissin" class="border border-black bg-[#4a9dd1] text-white py-2 px-8 rounded mt-4">
+        <div id="rdv-maissin" class="border border-[#b6d7ec] bg-[#4a9dd1] text-white py-2 px-8 rounded mt-4">
             <span class="font-bold">Prendre rendez-vous <br/> avec la Docteure Maissin</span>
         </div>    
         <div :class="{ invisible: !hover }" class="bg-[#4a9dd1] w-full bg-opacity-50 max-w-[364px] font-bold text-lg mx-auto">
