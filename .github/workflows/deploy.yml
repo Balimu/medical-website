@@ -1,0 +1,70 @@
+name: Deploy to Github Pages - Build Website
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Build Website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Create Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        uses: bahmutov/npm-install@v1
+      
+      - name: Build project
+        run: npm run build
+
+      - name: Upload production-ready build files
+        uses: actions/upload-pages-artifact@v1
+        with:
+          name: github-pages
+          path: dist/
+
+  deploy:
+    name: Deploy to the github-pages environment
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+    
+    #steps:
+
+    #  - name: Checkout Repo
+    #    uses: actions/checkout@v3
+
+    #  - name: Download build-files created in previous job
+    #    uses: actions/download-artifact@v3
+    #    with:
+    #      name: github-pages
+    #      path: dist/
+
+    #  - name: Display structure of downloaded files
+    #    run: ls -R
+    #    working-directory: dist/
+
+     # - name: Deploy website to Github Pages
+     #   uses: peaceiris/actions-gh-pages@v3
+     #   with:
+     #     github_token: ${{ secrets.GITHUB_TOKEN }}
+     #     publish_dir: dist/

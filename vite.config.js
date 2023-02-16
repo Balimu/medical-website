@@ -1,14 +1,18 @@
-import { fileURLToPath, URL } from "node:url";
+//import { fileURLToPath, URL } from "node:url";
+//import tailwindcss from 'tailwindcss';
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  base: '/medical-website/',
+  plugins: [vue(),
+  //  tailwindcss(),
+  ],
   resolve: {
-    alias: {
+    /*alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
+    },*/
   },
 });

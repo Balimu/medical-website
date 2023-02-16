@@ -59,11 +59,43 @@ export default {
                 </h1>
             </div>
             <div class="md:text-lg text-left max-w-3xl">
-                <Transition name="fade">
-                    <span v-if="showP">
-                        Le Cabinet Levecq-Maissin est... Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <div class="relative mb-12">
+                    <span class="invisible">
+                        Jeunes médecins généralistes nouvellement installées à Mons, 
+                        nous proposons des consultations sur rendez-vous du lundi au vendredi.
+                        Pour les patients dans l'incapacité de se déplacer, des visites à domicile sont possibles.
+                        Pour une demande de visite, merci de téléphoner au secrétariat, de préférence du matin.
                     </span>
-                </Transition>
+                    <Transition name="fade" class="absolute top-0 left-0">
+                        <span v-if="showP">
+                            Jeunes médecins généralistes nouvellement installées à Mons, 
+                            nous proposons des consultations sur rendez-vous du lundi au vendredi.
+                            Pour les patients dans l'incapacité de se déplacer, des visites à domicile sont possibles.
+                            Pour une demande de visite, merci de téléphoner au secrétariat, de préférence du matin.
+                        </span>
+                    </Transition>
+                </div>
+                <h2 class="font-bold text-lg mb-2">Informations utiles:</h2>
+                <ul class="text-base list-disc pl-4">
+                    <li>
+                        N'oubliez pas de vous munir de votre carte d'identité, ou carte ISI+ pour les jeunes enfants.
+                    </li>
+                    <li>
+                        Le paiement mobile est possible, mais nous ne disposons pas de Bancontact.
+                    </li>
+                    <li>
+                        Le parking est aisé aux alentours du cabinet.
+                    </li>
+                    <li>
+                        Consultations sur rendez-vous du lundi au vendredi de 8h à 18h uniquement.
+                    </li>
+                    <li>
+                        Attention, 1 rendez-vous = 1 patient.
+                    </li>
+                    <li>
+                        En cas d'empêchement, veuillez le signaler le plus rapidement possible afin de pouvoir libéŕer de la place pour d'autres patients dans le besoin.
+                    </li>
+                </ul>
             </div>
         </div>
 

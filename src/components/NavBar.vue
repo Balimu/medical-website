@@ -1,11 +1,13 @@
 <script>
 import { ref } from 'vue';
+//import debounce from 'lodash/debounce';
 
 export default {
     data: () => {
         return {
             scrollPosition: ref(window.scrollY),
             burgerMenu: true,
+            currentSection: ref("Accueil"),
         }
     },
     methods: {
@@ -14,22 +16,35 @@ export default {
             if (el) {
                 el.scrollIntoView({ behavior: "smooth" });
             }
+            this.burgerMenu = true;
         },
         getViewingSection() {
+            //console.log(window.scrollY);
             const topNosMedecins = document.getElementById("nos-medecins").getBoundingClientRect().top;
-            console.log("topNosMedecins: " + topNosMedecins);
+            //console.log("topNosMedecins: " + topNosMedecins);
             const topContact = document.getElementById("contact").getBoundingClientRect().top;
-            let currentSection = "";
             if(this.scrollPosition < topNosMedecins) {
-                currentSection = "Accueil";
+                this.currentSection = "Accueil";
             } else if (topNosMedecins <= this.scrollPosition && this.scrollPosition < topContact) {
-                currentSection = "NosMedecins";
+                this.currentSection = "NosMedecins";
             } else {
-                currentSection = "Contact";
+                this.currentSection = "Contact";
             }
-            return currentSection;
-        }
-    }
+            //console.log(this.scrollPosition);
+            //console.log(this.currentSection)
+            return this.currentSection;
+        },
+    },
+    beforeMouted() {
+        this.getViewingSection();
+    },
+    mounted() {
+        window.addEventListener('scroll', this.getViewingSection);
+    },
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.getViewingSection);
+    },
+
 }
 </script>
 
@@ -51,19 +66,19 @@ export default {
                 <div class="w-1/2 md:w-full mr-0 ml-auto flex-row-reverse">
                     <ul class="flex flex-col p-4 mt-2 border border-gray-100 rounded-lg bg-[#f45b5b] md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
                         <li>
-                            <button @click="scrollTo('app')" :class="{ bold: getViewingSection == 'Accueil' }" 
+                            <button @click="scrollTo('app')" :class="{ 'font-bold': this.currentSection == 'Accueil' }" 
                                 class="block w-full md:w-28 py-2 pl-3 pr-4 text-base text-white text-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">
                                 Accueil
                             </button>
                         </li>
                         <li>
-                            <button @click="scrollTo('nos-medecins')" :class="{ bold: getViewingSection == 'NosMedecins' }" 
+                            <button @click="scrollTo('nos-medecins')" :class="{ 'font-bold': this.currentSection == 'NosMedecins' }" 
                                 class="block w-full md:w-28 py-2 pl-3 pr-4 text-base text-white text-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">
                                 Nos médecins
                             </button>
                         </li>
                         <li>
-                            <button @click="scrollTo('contact')" :class="{ bold: getViewingSection == 'Contact' }" 
+                            <button @click="scrollTo('contact')" :class="{ 'font-bold': this.currentSection == 'Contact' }" 
                                 class="block w-full md:w-28 py-2 pl-3 pr-4 text-base text-white text-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:font-bold md:p-0">
                                 Contact
                             </button>
