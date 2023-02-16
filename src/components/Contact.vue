@@ -18,12 +18,26 @@ export default {
 <template>
     <div class="mx-8 text-left">
         <div id="contact" class="h-12 md:h-16"></div>
-        <h1 class="text-3xl font-bold mt-4">
+        <h1 class="text-3xl font-bold mt-4 mb-8">
             Contact
         </h1>
+
+        <h2 class="text-lg font-bold mb-2">Prise de rendez-vous</h2>
+        <p>
+            Pour une question d'organisation, nous ne disposons pas encore d'un secrétariat en commun.
+        </p>
+        <p>
+            Pour le Dr Levecq Céline :
+            La prise de rendez-vous en ligne est disponible 7jours/7 24h/24 via le lien de prise de rendez-vous,
+            ou du lundi au vendredi de 8h à 18h au 0477&nbsp;09&nbsp;13&nbsp;51.
+        </p>
+        <p>
+            Pour le Dr Maissin Mathilde :
+            La prise de rendez-vous se fait du lundi au vendredi de 8h à 18h au 065&nbsp;98&nbsp;27&nbsp;69.
+        </p>
         
-        <div class="flex flex-wrap mt-8 md:mt-16 mb-32">
-            <div class="col1 mb-4 w-[300px] text-center">
+        <div class="md:flex md:flex-wrap mt-8 md:mt-12 mb-32 text-center">
+            <div class="mx-auto mb-8 w-[300px] text-center">
                 <p class="mb-8">
                     <span class="font-bold">Adresse: </span><br/> 11 rue de Bouzanton <br/>
                     7000 Mons, Belgique
@@ -35,7 +49,7 @@ export default {
                     <ButtonMaissin />
                 </div>
             </div>
-            <div class="col2 block md:grow w-full md:w-auto content-center border border-black">
+            <div class="block md:grow w-full md:w-auto content-center border border-black">
                 <iframe class="w-full mx-auto h-[240px] md:h-[450px] max-w-[700px]" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
                     :src="'https://www.google.com/maps/embed/v1/place?key=' + mapsApiKey + '&q=docteur+céline+levecq,Mons'"
                     alt="Carte de Google Maps avec l'emplacement du Cabinet"

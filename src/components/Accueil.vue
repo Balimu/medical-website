@@ -99,7 +99,7 @@ export default {
             </div>
         </div>
 
-        <div class="col2 md:mt-12 pt-8 md:pt-12 px-8 mr-8">
+        <div class="col2 md:mt-12 pt-8 md:pt-12 px-8 md:mr-8">
             <div class="mb-2">
                 <ButtonLevecq />
             </div>

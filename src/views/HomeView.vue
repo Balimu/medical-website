@@ -19,7 +19,7 @@ export default {
 <template>
   <main>
     <NavBar />
-    <div class="pt-16 w-full items-center mx-auto max-w-screen-2xl px-4 xl:px-12">
+    <div class="pt-16 w-full items-center mx-auto max-w-screen-2xl md:px-4 xl:px-12">
       <Accueil />
       <NosMedecins />
       <Contact />
