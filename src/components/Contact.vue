@@ -36,7 +36,7 @@ export default {
             La prise de rendez-vous se fait du lundi au vendredi de 8h à 18h au 065&nbsp;98&nbsp;27&nbsp;69.
         </p>
         
-        <div class="md:flex md:flex-wrap mt-8 md:mt-12 mb-32 text-center">
+        <div class="md:flex md:flex-wrap mt-8 md:mt-12 pb-16 text-center">
             <div class="mx-auto mb-8 w-[300px] text-center">
                 <p class="mb-8">
                     <span class="font-bold">Adresse: </span><br/> 11 rue de Bouzanton <br/>
@@ -49,8 +49,8 @@ export default {
                     <ButtonMaissin />
                 </div>
             </div>
-            <div class="block md:grow w-full md:w-auto content-center border border-black mb-16">
-                <iframe class="w-full mx-auto h-[240px] md:h-[450px] max-w-[700px]" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+            <div class="block md:grow w-full md:w-auto content-center pb-16">
+                <iframe class="w-full mx-auto h-[240px] md:h-[450px] max-w-[700px] border border-black" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
                     :src="'https://www.google.com/maps/embed/v1/place?key=' + mapsApiKey + '&q=docteur+céline+levecq,Mons'"
                     alt="Carte de Google Maps avec l'emplacement du Cabinet"
                 ></iframe>
