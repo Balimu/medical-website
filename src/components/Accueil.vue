@@ -50,7 +50,7 @@ export default {
 
 <template>
 
-    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr]">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] mb-4">
 
         <div class="col1 px-8">
             <div class="mt-4 md:mt-8 h-24 md:h-32 flex content-center text-2xl text-left md:text-4xl">
@@ -75,8 +75,10 @@ export default {
                         </span>
                     </Transition>
                 </div>
-                <h2 class="font-bold text-lg mb-2">Informations utiles:</h2>
-                <ul class="text-base list-disc pl-4">
+                <h2 class="font-bold text-lg mb-2">
+                    Informations utiles:
+                </h2>
+                <ul class="text-base list-disc pl-5">
                     <li>
                         N'oubliez pas de vous munir de votre carte d'identité, ou carte ISI+ pour les jeunes enfants.
                     </li>
