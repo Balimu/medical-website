@@ -50,10 +50,14 @@ export default {
                 </div>
             </div>
             <div class="block md:grow w-full md:w-auto content-center pb-6">
-                <iframe class="w-full mx-auto h-[240px] md:h-[450px] max-w-[700px] border border-black" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-                    :src="'https://www.google.com/maps/embed/v1/place?key=' + mapsApiKey + '&q=docteur+céline+levecq,Mons'"
-                    alt="Carte de Google Maps avec l'emplacement du Cabinet"
-                ></iframe>
+                <!--iframe class="w-full mx-auto h-[240px] md:h-[450px] max-w-[700px] border border-black" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                    :src="'https://maps.googleapis.com/maps/embed/v1/place?key=' + mapsApiKey + '&q=docteur+céline+levecq,Mons'"
+                    defer alt="Carte de Google Maps avec l'emplacement du Cabinet"
+                ></iframe-->
+                <iframe class="w-full mx-auto h-[240px] md:h-[450px] max-w-[700px] border border-black" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4906303115954!2d3.9459207000000003!3d50.4505878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c25006c749d3e9%3A0x25634869575569bf!2sRue%20de%20Bouzanton%2011%2C%207000%20Mons%2C%20Belgique!5e0!3m2!1sfr!2ses!4v1676932744851!5m2!1sfr!2ses" 
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
 
         </div>

@@ -11,13 +11,13 @@
         <div class="mb-16 max-w-[700px] lg:pl-16">
             <div class="grid grid-cols-[2fr_3fr] lg:grid-cols-[2fr_5fr] mt-8 md:mt-12 text-right">
                 <img src="../assets/celine_photo.jpg" class="ml-auto h-auto w-full max-w-[230px] rounded-full" alt="Photo of Dr Levecq Céline" />
-                <span class="text-left md:text-lg md:pr-12 pl-4 md:pl-8 md:pl-0 pt-4">
+                <span class="text-left md:text-lg md:pr-12 pl-4 md:pl-8 pt-4">
                     <p>Dr Levecq Céline, </p>
                     <p>médecin conventionné </p>
                 </span>
             </div>
             <div class="grid grid-cols-[3fr_2fr] lg:grid-cols-[5fr_2fr] mt-8 md:mt-12">
-                <span class="md:text-lg text-right pr-4 md:pr-8 pt-4">
+                <span class="text-right md:text-lg md:pl-12 pr-4 md:pr-8 pt-4">
                     <p>Dr Maissin Mathilde, </p>
                     <p>médecin conventionné </p>
                 </span>
