@@ -75,8 +75,10 @@ export default {
                         </span>
                     </Transition>
                 </div>
-                <h2 class="font-bold text-lg mb-2">Informations utiles:</h2>
-                <ul class="text-base list-disc pl-4">
+                <h2 class="font-bold text-lg mb-2">
+                    Informations utiles:
+                </h2>
+                <ul class="text-base list-disc pl-5">
                     <li>
                         N'oubliez pas de vous munir de votre carte d'identité, ou carte ISI+ pour les jeunes enfants.
                     </li>

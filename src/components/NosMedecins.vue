@@ -25,8 +25,10 @@
             </div>
         </div>
 
-        <h2 class="text-lg font-bold mb-2">Nos services</h2>
-        <ul class="list-disc pl-4">
+        <h2 class="text-lg font-bold mb-2">
+            Nos services:
+        </h2>
+        <ul class="list-disc pl-5">
             <li>
                 Pratique de médecine générale et suivi des patients de 0 à 110 ans.
             </li>
